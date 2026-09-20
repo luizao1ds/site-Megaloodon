@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megaloodon Outfits - Carrinho</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Megaloodon Outfits</h1>
+
+        <button id="abrirCarrinho">
+            🛒 Carrinho
+            <span id="contador">0</span>
+        </button>
+    </header>
+
+    <main>
+
+        <h2>Produtos</h2>
+
+        <div class="produtos">
+
+            <div class="produto">
+                <div class="imagem">👕</div>
+
+                <h3>Camiseta Megaloodon</h3>
+                <p>R$ 79,90</p>
+
+                <button onclick="adicionarProduto(
+                    'Camiseta Megaloodon',
+                    79.90
+                )">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+
+            <div class="produto">
+                <div class="imagem">🧥</div>
+
+                <h3>Moletom Megaloodon</h3>
+                <p>R$ 149,90</p>
+
+                <button onclick="adicionarProduto(
+                    'Moletom Megaloodon',
+                    149.90
+                )">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+
+            <div class="produto">
+                <div class="imagem">👖</div>
+
+                <h3>Calça Street</h3>
+                <p>R$ 119,90</p>
+
+                <button onclick="adicionarProduto(
+                    'Calça Street',
+                    119.90
+                )">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- CARRINHO -->
+
+    <div id="fundoCarrinho" class="fechado"></div>
+
+    <aside id="carrinho" class="fechado">
+
+        <div class="cabecalhoCarrinho">
+            <h2>Seu carrinho</h2>
+
+            <button id="fecharCarrinho">✕</button>
+        </div>
+
+        <div id="listaCarrinho">
+            <!-- Produtos serão adicionados aqui -->
+        </div>
+
+        <div class="rodapeCarrinho">
+
+            <div class="total">
+                <span>Total:</span>
+                <strong id="total">R$ 0,00</strong>
+            </div>
+
+            <button class="finalizar">
+                Finalizar compra
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <script src="script3.js"></script>
+
+</body>
+</html>
