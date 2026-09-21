@@ -1,11 +1,13 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: rgb(255, 65, 65);
+  background-image: url(Logos/logo-emblema.jpg);
   background-attachment:fixed;
   align-items: center;
-  background-size: cover;
+  background-size: 80%;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: #00081a;
 }
 
 html, body{
@@ -73,14 +75,18 @@ color: white;
     width:400%;
     height:100%;
     transition:transform 0.5s ease;
-    border-radius:20px;
+    border-radius:20px; 
+    align-items: center;
+    justify-items: center;
+    
 }
 
 .imagens img {
     width:25%;
-    height:100%;
+    height:80%;
     object-fit:contain;
     flex-shrink:0;
+   
 }
 
 .carrosel button {
@@ -174,10 +180,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50px ;
+    
+  
 }
 
 .logo-centro img {
     width: 300px;
+   
     opacity: 0.15; /* deixa a logo transparente */
 }
 

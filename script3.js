@@ -1,190 +1,100 @@
-let carrinho = [];
+// Elementos do formulário
+const inputNome = document.getElementById("nome");
+const inputIdade = document.getElementById("idade");
+const inputNota = document.getElementById("nota");
+const btn = document.getElementById("btn");
+const Tabela = document.getElementById("tabela");
+const quantidade = document.getElementById("quantidade");
 
+btn.addEventListener("click", cadastro);
 
-// ELEMENTOS
-
-const carrinhoElemento = document.getElementById("carrinho");
-const fundoCarrinho = document.getElementById("fundoCarrinho");
-
-const abrirCarrinho = document.getElementById("abrirCarrinho");
-const fecharCarrinho = document.getElementById("fecharCarrinho");
-
-const listaCarrinho = document.getElementById("listaCarrinho");
-
-const totalElemento = document.getElementById("total");
-const contadorElemento = document.getElementById("contador");
-
-
-// ABRIR CARRINHO
-
-abrirCarrinho.addEventListener("click", () => {
-
-    carrinhoElemento.classList.remove("fechado");
-    fundoCarrinho.classList.remove("fechado");
-
+// Permite cadastrar também com Enter
+[inputNome, inputIdade, inputNota].forEach(function (campo) {
+    campo.addEventListener("keydown", function (evento) {
+        if (evento.key === "Enter") {
+            cadastro();
+        }
+    });
 });
 
+function cadastro() {
+    const nome = inputNome.value.trim();
+    const idade = Number(inputIdade.value);
+    const nota = Number(inputNota.value);
 
-// FECHAR CARRINHO
-
-fecharCarrinho.addEventListener("click", fechar);
-
-fundoCarrinho.addEventListener("click", fechar);
-
-
-function fechar() {
-
-    carrinhoElemento.classList.add("fechado");
-    fundoCarrinho.classList.add("fechado");
-
-}
-
-
-// ADICIONAR PRODUTO
-
-function adicionarProduto(nome, preco) {
-
-    const produtoExistente = carrinho.find(
-        produto => produto.nome === nome
-    );
-
-
-    if (produtoExistente) {
-
-        produtoExistente.quantidade++;
-
-    } else {
-
-        carrinho.push({
-
-            nome: nome,
-            preco: preco,
-            quantidade: 1
-
-        });
-
+    if (
+        nome === "" ||
+        inputIdade.value === "" ||
+        inputNota.value === "" ||
+        Number.isNaN(idade) ||
+        idade < 1 ||
+        Number.isNaN(nota) ||
+        nota < 0 ||
+        nota > 10
+    ) {
+        alert("Preencha todos os campos corretamente!\nIdade deve ser maior que 0.\nNota deve ser entre 0 e 10.");
+        return;
     }
 
+    let situacao;
+    let classe;
 
-    atualizarCarrinho();
+    if (nota >= 7) {
+        situacao = "Aprovado";
+        classe = "aprovado";
+    } else if (nota >= 5) {
+        situacao = "Recuperação";
+        classe = "recuperacao";
+    } else {
+        situacao = "Reprovado";
+        classe = "reprovado";
+    }
 
-}
+    const linha = document.createElement("tr");
 
+    const colunaNome = document.createElement("td");
+    colunaNome.textContent = nome;
 
-// ATUALIZAR CARRINHO
+    const colunaIdade = document.createElement("td");
+    colunaIdade.textContent = idade;
 
-function atualizarCarrinho() {
+    const colunaNota = document.createElement("td");
+    colunaNota.textContent = nota.toFixed(1);
 
-    listaCarrinho.innerHTML = "";
+    const colunaSituacao = document.createElement("td");
+    colunaSituacao.textContent = situacao;
+    colunaSituacao.classList.add(classe);
 
-
-    let total = 0;
-    let quantidadeTotal = 0;
-
-
-    carrinho.forEach((produto, index) => {
-
-        total += produto.preco * produto.quantidade;
-
-        quantidadeTotal += produto.quantidade;
-
-
-        const item = document.createElement("div");
-
-        item.classList.add("itemCarrinho");
-
-
-        item.innerHTML = `
-
-            <div class="itemTopo">
-
-                <h3>${produto.nome}</h3>
-
-                <button
-                    class="remover"
-                    onclick="removerProduto(${index})">
-                    Remover
-                </button>
-
-            </div>
-
-
-            <p>
-                R$ ${produto.preco.toFixed(2).replace(".", ",")}
-            </p>
-
-
-            <div class="quantidade">
-
-                <button
-                    onclick="diminuirQuantidade(${index})">
-                    −
-                </button>
-
-                <span>
-                    ${produto.quantidade}
-                </span>
-
-                <button
-                    onclick="aumentarQuantidade(${index})">
-                    +
-                </button>
-
-            </div>
-
-        `;
-
-
-        listaCarrinho.appendChild(item);
-
+    const colunaAcao = document.createElement("td");
+    const btnExcluir = document.createElement("button");
+    btnExcluir.textContent = "Excluir";
+    btnExcluir.type = "button";
+    btnExcluir.classList.add("btnExcluir");
+    btnExcluir.addEventListener("click", function () {
+        linha.remove();
+        atualizarQuantidade();
     });
 
+    colunaAcao.appendChild(btnExcluir);
 
-    totalElemento.textContent =
-        `R$ ${total.toFixed(2).replace(".", ",")}`;
+    linha.appendChild(colunaNome);
+    linha.appendChild(colunaIdade);
+    linha.appendChild(colunaNota);
+    linha.appendChild(colunaSituacao);
+    linha.appendChild(colunaAcao);
 
+    Tabela.appendChild(linha);
 
-    contadorElemento.textContent = quantidadeTotal;
+    inputNome.value = "";
+    inputIdade.value = "";
+    inputNota.value = "";
+    inputNome.focus();
 
+    atualizarQuantidade();
 }
 
-
-// AUMENTAR
-
-function aumentarQuantidade(index) {
-
-    carrinho[index].quantidade++;
-
-    atualizarCarrinho();
-
-}
-
-
-// DIMINUIR
-
-function diminuirQuantidade(index) {
-
-    carrinho[index].quantidade--;
-
-
-    if (carrinho[index].quantidade <= 0) {
-
-        carrinho.splice(index, 1);
-
-    }
-
-
-    atualizarCarrinho();
-
-}
-
-
-// REMOVER
-
-function removerProduto(index) {
-
-    carrinho.splice(index, 1);
-
-    atualizarCarrinho();
-
+function atualizarQuantidade() {
+    
+    const alunos = Tabela.querySelectorAll("tr");
+    quantidade.textContent = " " - 1 + alunos.length;
 }
