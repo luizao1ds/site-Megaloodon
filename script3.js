@@ -23,15 +23,7 @@ function cadastro() {
     const nota = Number(inputNota.value);
 
     if (
-        nome === "" ||
-        inputIdade.value === "" ||
-        inputNota.value === "" ||
-        Number.isNaN(idade) ||
-        idade < 1 ||
-        Number.isNaN(nota) ||
-        nota < 0 ||
-        nota > 10
-    ) {
+        nome === "" ||inputIdade.value === "" ||inputNota.value === "" ||Number.isNaN(idade) ||idade < 1 || Number.isNaN(nota) ||nota < 0 || nota > 10) {
         alert("Preencha todos os campos corretamente!\nIdade deve ser maior que 0.\nNota deve ser entre 0 e 10.");
         return;
     }

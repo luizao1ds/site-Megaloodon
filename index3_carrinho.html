@@ -5,27 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Alunos</title>
     <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="cabecalho1"> <!-- Começo do Cabeçalho -->
+  <img src="Logos/logo sem fundo.png" alt="Logo">
+    <nav>
+        <ul>
+        <li><a href="index.html"><h3>Home</h3></a></li>
+        <li><a href="index_loja.html"><h3>Loja</h3></a></li>
+        <li><a href="index3_carrinho.html"><h3>Carrinho</h3></a></li>
+        </ul>
+    </nav>
+  </header><!-- Fim do Cabeçalho -->
     <div class="container">
-        <h1>Lista de Alunos</h1>
+        <h1>Lista de Produtos</h1>
 
-        <input type="text" id="nome" placeholder="Digite o Nome">
-        <input type="number" id="idade" placeholder="Digite a idade">
-        <input type="number" id="nota" placeholder="Digite a nota">
+      <!--    <input type="text" id="nome" placeholder="Digite o Nome">-->
+       <!-- <input type="number" id="idade" placeholder="Digite a idade"> --> 
+       <!--  <input type="number" id="nota" placeholder="Digite a nota"> -->
 
-        <button type="button" class="btn" id="btn">Cadastrar</button>
+        <!-- <button type="button" class="btn" id="btn">Cadastrar</button> -->
 
-        <h2>Quantidade de Alunos:<span id="quantidade"> 0</span></h2>
+        <h2>Quantidade de Produtos:<span id="quantidade"> 0</span></h2>
        
         
         <table id="tabela">
          <tr>
             <th>Nome</th>
-             <th>Idade</th>
-             <th>Nota</th>
+             <th>Preço</th>
+             <th>descrição</th>
              <th>Situação</th>
-             <th>Ação</th>
+             <th>Excluir</th>
          </tr>
         </table>
     </div>
