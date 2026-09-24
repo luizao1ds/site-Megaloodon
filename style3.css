@@ -1,6 +1,17 @@
 body {
-    background-color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("bakgrounds/megaloodon-outfits-background-02.png");;
+    background-attachment:fixed;
+    align-items: center;
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat; 
+  
 }
 
 .container {
@@ -92,4 +103,170 @@ th {
 
 .btnExcluir:hover {
     background-color: darkred;
+}
+.cabecalho1 {
+  background: #1a1a1a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cabecalho1 img {
+  width: 150px ;
+  height: 150px ;
+  opacity: 0.55;
+  
+}
+.cabecalho1 nav a:hover{
+    color: rgb(62, 131, 221);
+    transition: 0.3s;
+}
+
+nav { 
+ margin-left: auto;
+
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+nav a {
+text-decoration: none;
+align-items: right;
+color: white;
+}
+/*Fim do Cabeçalho*/
+
+
+/*começo do rodapé*/
+footer {
+    display:center;
+}
+
+.footer-top {
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px;
+    border-radius: 0px;
+}
+
+.footer-bottom {
+    text-align: center;
+    background-color:black;
+    color: white;
+    padding: 15px;
+    border-radius: 0px;
+}
+
+
+.rodape {
+    background-color: rgb(2, 2, 46);
+    color: white;
+    padding: 80px 10%;
+}
+
+.rodape-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.coluna {
+    flex: 1;
+}
+
+.coluna h3 {
+    color: rgb(62, 131, 221);
+    margin-bottom: 20px;
+}
+
+.coluna p {
+    margin: 10px 0;
+    font-size: 20px;
+    
+}
+
+.coluna a {
+    color: white;
+    text-decoration: none;
+}
+.i i{
+    color: rgb(62, 131, 221);;
+}
+
+.i p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.logo-centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px ;
+    
+  
+}
+
+.logo-centro img {
+    width: 300px;
+   
+    opacity: 0.15; /* deixa a logo transparente */
+}
+
+.redes {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.redes a {
+    font-size: 35px;
+}
+.redes i {
+    font-size: 30px;
+}
+
+.redes i:hover {
+    color: rgb(62, 131, 221)!important;
+    transition: color 0.3s !important ;
+    cursor: pointer;
+}
+/*final do rodapé*/
+
+
+
+
+/* Deixa o codigo responsivo */
+
+/* Quando a tela for maior que 768px (px=pixels)
+viram 2 colunas (tablet)*/
+
+@media(min-width:768px){
+    .contender{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* Quando a tela for maior que 1024px (px=pixels)
+viram 3 colunas (desktop)*/
+
+@media(min-width:1024px){
+    .contender{
+        grid-template-columns: repeat(3,1fr);
+    }
 }

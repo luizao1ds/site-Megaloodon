@@ -1,13 +1,17 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url(Logos/logo-emblema.jpg);
-  background-attachment:fixed;
-  align-items: center;
-  background-size: 80%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #00081a;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("bakgrounds/megaloodon-outfits-background-02.png");;
+    background-attachment:fixed;
+    align-items: center;
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat; 
+  
 }
 
 html, body{
@@ -23,7 +27,7 @@ html, body{
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 15px;
+  
   padding: 20px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -31,7 +35,7 @@ html, body{
 .cabecalho1 img {
   width: 150px ;
   height: 150px ;
-   opacity: 0.55;
+  opacity: 0.55;
   
 }
 .cabecalho1 nav a:hover{
@@ -60,79 +64,30 @@ color: white;
 }
 /*Fim do Cabeçalho*/
 
-/*Começo do carrosel*/
-
-.carrosel {
-    width:600px;
-    height:400px;
-    overflow:hidden;
-    position:relative;
-    margin:0 auto;
-}
-
-.imagens {
-    display:flex;
-    width:400%;
-    height:100%;
-    transition:transform 0.5s ease;
-    border-radius:20px; 
-    align-items: center;
-    justify-items: center;
-    
-}
-
-.imagens img {
-    width:25%;
-    height:80%;
-    object-fit:contain;
-    flex-shrink:0;
-   
-}
-
-.carrosel button {
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    z-index:10;
-    background-color:rgba(0, 0, 0, 0.5);
-    color:white;
-    border:none;
-    font-size:20px;
-    padding:10px 15px;
-    cursor:pointer;
-}
-
-.Anterior {
-    left:10px;
-}
-
-.Próximo {
-    right:10px;
-}
-
 .cabecalho2 {
-  height: 100vh;
+  height: 60vh;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: 67.5%;
-  background-position: right center;
-  position: relative;
+  margin: -20px 00px 200px 00px;
+ 
+  background: linear-gradient(to right, rgb(24, 15, 155), rgba(22, 10, 196, 0.201));
 }
  
 
 .cabecalho2-texto {
-  text-align: left;
-  color: white;
-  max-width: 500px;
+  text-align: center;
+  color: rgba(24, 15, 155, 0.774);
+  max-width: 1000px;
+  margin: 20px 000px 20px 50px;
 }
 
 .cabecalho2-texto  h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.9rem;
+  margin-bottom: 30px;
+  margin: auto;
 }
 
 .cabecalho2-texto  p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
@@ -151,10 +106,9 @@ color: white;
 
 .btn {
   display: block;
-  width:25%;
-  margin: 20px 0 0 0;
-  padding: 12px;
-  background: darkorange;
+  width: 200px;
+  margin: 20px 000px 20px 530px;
+  background: rgba(24, 15, 155, 0.774);
   border: none;
   color: black;
   font-size: 16px;
@@ -169,7 +123,7 @@ color: white;
 }
 
 .btn:hover {
-  background: orangered;
+  background:  rgb(62, 131, 221);
   transform: translateY(-3px);
 }
 
@@ -184,12 +138,12 @@ color: white;
 
 .cabecalho3-texto {
   text-align: center;
-  color: white;
+  color: rgba(24, 15, 155, 0.774) ;
   max-width: 1200px;
 }
 
 .cabecalho3-texto  p {
-  font-size: 3.4rem;
+  font-size: 2.5rem;
   margin-bottom: px;
 }
 
@@ -339,6 +293,8 @@ footer {
     cursor: pointer;
 }
 /*final do rodapé*/
+
+
 
 
 /* Deixa o codigo responsivo */
