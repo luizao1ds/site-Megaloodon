@@ -3,181 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho | Megaloodon Outfits</title>
     <link rel="stylesheet" href="style_carrinho.css">
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="Logos/logo sem fundo.png">
+     <title>Megaloodon Outfits | Carrinho</title>
 </head>
 
-<body>
-
-<header class="cabecalho1">
-
-    <img src="Logos/logo sem fundo.png" alt="Logo">
-
+ <header class="cabecalho1"> <!-- Começo do Cabeçalho -->
+  <img src="Logos/logo sem fundo.png" alt="Logo">
     <nav>
         <ul>
-            <li><a href="index.html"><h3>Home</h3></a></li>
-            <li><a href="index_loja.html"><h3>Loja</h3></a></li>
-            <li>
-                <a href="index3_carrinho.html">
-                    <h3>
-                        Carrinho
-                        <span id="contadorCarrinho">0</span>
-                    </h3>
-                </a>
-            </li>
+        <li><a href="index_pagina_inicial.html"><h3>Home</h3></a></li>
+        <li><a href="index_loja.html"><h3>Loja</h3></a></li>
+        <li><a href="index_carrinho.html"><h3>Carrinho</h3></a></li>
         </ul>
     </nav>
+  </header><!-- Fim do Cabeçalho -->
 
-</header>
-
-
-<main class="carrinho-container">
-
-    <h1>Meu Carrinho</h1>
-
-    <div class="tabela-container">
-
-        <table id="tabelaCarrinho">
-
-            <thead>
-                <tr>
-                    <th>Imagem</th>
-                    <th>Produto</th>
-                    <th>Descrição</th>
-                    <th>Preço</th>
-                    <th>Quantidade</th>
-                    <th>Total</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-
-            <tbody id="corpoCarrinho"></tbody>
-
-        </table>
-
-    </div>
-
-
-    <section class="resumo">
-
-        <div>
-            <span>Total da compra:</span>
-
-            <strong id="totalCarrinho">
-                R$ 0,00
-            </strong>
-        </div>
-
-        <div class="botoes">
-
-            <a href="index_loja.html" class="btn-continuar">
-                Continuar comprando
-            </a>
-
-            <button class="btn-limpar" onclick="limparCarrinho()">
-                Limpar carrinho
-            </button>
-
-            <button class="btn-finalizar" onclick="finalizarPedido()"  type="reset">
-                Finalizar pedido
-            </button>
-
-        </div>
-
-    </section>
-
+   <main class="container">
+    <img src="Logos/logo sem fundo.png" alt="Logo">
+   <h1>Seu pedido chega em breve!</h1>
+   <br>
+   <h2>Obrigado pela preferência!</h2>
 </main>
 
-
-<footer class="rodape">
-
+<footer class="rodape"><!-- começo do rodapé -->
     <div class="rodape-container">
 
         <div class="coluna">
-
             <h3>Horários de funcionamento</h3>
 
             <p>Seg a Sex: <strong>6h às 23h</strong></p>
             <p>Sábados: <strong>7h às 00h</strong></p>
 
             <br>
-
             <h3>Localização</h3>
 
             <p>Av. Paulista, 123</p>
             <p>São Paulo - SP</p>
 
-        </div>
-
-
-        <div class="coluna logo-centro">
-
-            <img src="Logos/logo sem fundo.png" alt="Logo">
-
-        </div>
-
-
-        <div class="coluna">
-
-            <h3>Contato</h3>
-
-            <p>
-                <i class="fa-brands fa-whatsapp"></i>
-                (11) 1234-5678
-            </p>
-
-            <p>
-                <i class="fa-solid fa-phone"></i>
-                (11) 98765-4321
-            </p>
-
-            <p>
-                <i class="fa-solid fa-at"></i>
-                contato@MegaloodonOutfits.com
-            </p>
-
             <br>
 
-            <h3>Siga a Megaloodon Outfits</h3>
+           
+        </div>
+
+        <div class="coluna logo-centro">
+            <img src="Logos/logo sem fundo.png" alt="Logo">
+        </div>
+
+        <div class="coluna">
+            <h3>Contato</h3>
+        <div class="i">
+            <p><i class="fa-brands fa-whatsapp"></i> (11) 1234-5678</p>
+            <p><i class="fa-solid fa-phone"></i> (11) 98765-4321</p>
+            <p><i class="fa-solid fa-at"></i> contato@Megaloodon Outfits.com</p>
+        </div>
+            <br>
+
+            <h3>Siga a Megaloodon Outfits nas Redes </h3>
 
             <div class="redes">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-youtube"></i>  
             </div>
-
         </div>
 
     </div>
-
 </footer>
 
-
-<div class="footer-bottom">
+  <div class="footer-bottom">
     &copy;2026 Megaloodon Outfits | Todos os direitos reservados
-</div>
+  </div>
 
-
-<script src="script.js"></script>
-
-<script>
-function finalizarPedido() {
-
-    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-
-    if (carrinho.length === 0) {
-        alert("Seu carrinho está vazio.");
-        return;
-    }
-
-    // Altere este endereço se sua página de finalização tiver outro nome.
-    window.location.href = "index_loja.html";
-    limparCarrinho()
-}
-</script>
-
-</body>
-</html>
+<!-- fim do rodapé -->

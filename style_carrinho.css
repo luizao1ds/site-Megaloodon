@@ -6,14 +6,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: #333;
     color: #222;
 }
 
 
-/* =========================
-   CABEÇALHO
-========================= */
+ /* cabeçalho */
 .cabecalho1 {
   background: #1a1a1a;
   color: white;
@@ -56,230 +54,18 @@ align-items: right;
 color: white;
 }
 /*Fim do Cabeçalho*/
-
-
-
-/* =========================
-   CARRINHO
-========================= */
-
-.carrinho-container {
-    width: 94%;
-    max-width: 1500px;
-
-    margin: 60px auto;
-
-    min-height: 500px;
-}
-
-.carrinho-container h1 {
-    text-align: center;
-    margin-bottom: 35px;
-
-    color:blue;
-}
-
-
-/* =========================
-   TABELA
-========================= */
-
-.tabela-container {
-    width: 100%;
-    overflow-x: auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-thead {
-    background: navy;
+ 
+.container {
+    max-width:  500px; 
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 50px auto;
+    padding:  50px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.9);
     color: white;
 }
 
-th,
-td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    white-space: nowrap;
-}
-
-td img {
-    width: 100px;
-    height: 110px;
-    object-fit: contain;
-}
-
-.produto-nome {
-    font-weight: bold;
-    min-width: 220px;
-}
-
-.produto-descricao {
-    max-width: 300px;
-    color: #666;
-    font-size: 14px;
-}
-
-.carrinho-vazio {
-    padding: 50px;
-    font-size: 20px;
-    color: #777;
-}
-
-
-/* =========================
-   QUANTIDADE
-========================= */
-
-.quantidade {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.quantidade button {
-    width: 30px;
-    height: 30px;
-
-    border: none;
-    border-radius: 5px;
-
-    background:blue;
-    color: white;
-
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.quantidade button:hover {
-    background: rgb(62, 131, 221);
-}
-
-.quantidade span {
-    min-width: 25px;
-}
-
-
-/* =========================
-   BOTÃO REMOVER
-========================= */
-
-.btn-remover {
-    border: none;
-
-    padding: 8px 12px;
-
-    border-radius: 5px;
-
-    background: #b3261e;
-    color: white;
-
-    cursor: pointer;
-}
-
-.btn-remover:hover {
-    opacity: 0.8;
-}
-
-
-/* =========================
-   RESUMO
-========================= */
-
-.resumo {
-    margin-top: 25px;
-
-    padding: 25px;
-
-    background: white;
-
-    border-radius: 12px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.10);
-}
-
-.resumo > div:first-child {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-
-    font-size: 22px;
-}
-
-#totalCarrinho {
-    color: blue;
-}
-
-
-/* =========================
-   BOTÕES
-========================= */
-
-.botoes {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-
-    margin-top: 20px;
-
-    flex-wrap: wrap;
-}
-
-.botoes a,
-.botoes button {
-    border: none;
-
-    padding: 13px 20px;
-
-    border-radius: 7px;
-
-    text-decoration: none;
-
-    cursor: pointer;
-
-    font-size: 15px;
-}
-
-.btn-continuar {
-    background: blue;
-    color: white;
-}
-
-.btn-limpar {
-    background: red;
-    color: white;
-}
-
-.btn-finalizar {
-    background: rgb(62, 131, 221);
-    color: white;
-}
-
-.btn-continuar:hover,
-.btn-finalizar:hover {
-    opacity: 0.85;
-}
-
-.btn-limpar:hover {
-    background: darkred;
-}
-
-
-/* =========================
-   RODAPÉ
-========================= */
-
+/*rodapé*/
 footer {
     display:center;
 }
@@ -385,9 +171,6 @@ footer {
 
 
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
 
 @media (max-width: 900px) {
 

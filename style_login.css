@@ -23,6 +23,9 @@ body{
 }
 
 
+.espaco {
+    height: 100px;
+}
 
 h1, h2, h3{ 
     text-align: center;
