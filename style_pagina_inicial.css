@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url("bakgrounds/megaloodon-outfits-background-02.png");;
+    background-color: #1a1a1a;
     background-attachment:fixed;
     align-items: center;
     background-size: 30%;
@@ -69,13 +69,13 @@ color: white;
   width: 100%;
   margin: -20px 00px 200px 00px;
  
-  background: linear-gradient(to right, rgb(24, 15, 155), rgba(22, 10, 196, 0.201));
+  background: linear-gradient(to bottom, rgb(24, 15, 155), rgba(22, 10, 196, 0.201), #1a1a1a);
 }
  
 
 .cabecalho2-texto {
   text-align: center;
-  color: rgba(24, 15, 155, 0.774);
+  color: white;
   max-width: 1000px;
   margin: 20px 000px 20px 50px;
 }
@@ -107,7 +107,7 @@ color: white;
 .btn {
   display: block;
   width: 200px;
-  margin: 20px 000px 20px 530px;
+  margin: 20px 000px 20px 430px;
   background: rgba(24, 15, 155, 0.774);
   border: none;
   color: black;
@@ -127,43 +127,25 @@ color: white;
   transform: translateY(-3px);
 }
 
-.cabecalho3 {
-    height: 100vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: 67.5%;
-  background-position: center;
-  position: relative;
-}
+
 
 .cabecalho3-texto {
+
   text-align: center;
   color: rgba(24, 15, 155, 0.774) ;
-  max-width: 1200px;
+
 }
 
-.cabecalho3-texto  p {
+.cabecalho3-texto  h1 {
   font-size: 2.5rem;
-  margin-bottom: px;
+
 }
 
-.overlay2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
- 
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; 
-  padding-left: 80px;
-}
+
 
 .container-pai {
     display: flex;
     gap: 20px;
-    
     background-size: cover;
     background-attachment:fixed;
     background-size: 100%;
